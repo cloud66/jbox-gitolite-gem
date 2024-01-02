@@ -16,7 +16,7 @@ module Gitolite
     class << self
 
       def from_file(key)
-        raise "#{key} does not exist!" unless File.exists?(key)
+        raise "#{key} does not exist!" unless File.exist?(key)
 
         # Get our owner and location
         File.basename(key) =~ /^([\+\w\.-]+(?:@(?:[\w-]+\.)+\D{2,4})?)(?:@([\w-]+))?.pub$/i

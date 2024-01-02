@@ -30,8 +30,8 @@ module Gitolite
 
         # If we got here it is a valid git repo,
         # now check directory structure
-        File.exists?(File.join(dir, 'conf')) &&
-          File.exists?(File.join(dir, 'keydir')) &&
+        File.exist?(File.join(dir, 'conf')) &&
+          File.exist?(File.join(dir, 'keydir')) &&
           !Dir.glob(File.join(dir, 'conf', '*.conf')).empty?
       end
 
